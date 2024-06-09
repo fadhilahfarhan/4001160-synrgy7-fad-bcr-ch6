@@ -9,7 +9,7 @@ export async function seed(knex: Knex): Promise<void> {
     {
       username: 'fadilgemoy',
       email: 'fadil123@gmail.com',
-      password: '$2y$10$0EH25zCGDplob3v9LRI4OeSe0iVrEQuTTD2h5W9usfYtSysWQx1ba',
+      password: '$2y$10$0EH25zCGDplob3v9LRI4OeSe0iVrEQuTTD2h5W9usfYtSysWQx1ba', // fadil123456
       role: 'superadmin'
     },
   ]);

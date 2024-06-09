@@ -25,7 +25,8 @@
 | `/user/superadmin/createadmin`   |  `POST`  | Create admin user by superadmin                     |
 | `/user/register/member`          |  `POST`  | Register member user                                |
 | `/user/login/superadmin`         |  `POST`  | login for superadmin                                |
-| `/user/login/member`             |  `POST`  | login for member|
+| `/user/login/member`             |  `POST`  | login for member                                    |
+| `/user/whoami      `             |  `GET`   | Check for current user                                    |
 
 
 ### ERD (Entity Relationship Diagram)

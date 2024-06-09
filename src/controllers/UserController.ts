@@ -7,6 +7,9 @@ import createToken from '../utils/tokenHelper';
 class UserController {
   async getAll(req: Request, res: Response) {
     try {
+      if(req.user.role === 'member'){
+        return res.status(404).json({ message: 'unauthorize' });
+      }
       const getUsers: Users[] = await userService.getAll();
 
       if (!getUsers.length) {
@@ -105,6 +108,15 @@ class UserController {
         token,
         role: user.role,
       });
+    } catch (error) {
+      return res.status(404).json({ message: 'something wrong' });
+    }
+  }
+  async whoami(req: Request, res: Response){
+    try {
+      return res.status(200).json({
+        user: req.user
+      })
     } catch (error) {
       return res.status(404).json({ message: 'something wrong' });
     }
